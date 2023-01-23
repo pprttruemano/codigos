@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabela</title>
+    <style>
+        table {
+            width: 500px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        
+        }
+        thead, tfoot {
+            background-color: rgb(44, 43, 43);
+            color: white;
+        }
+        td.num {
+            text-align: right;
+        }
+        caption{
+            font-size:1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+
+        
+        }
+            tbody > tr:nth-child(1n) {
+                background-color: white;
+            }
+            /* TR:NTHCHILD só funciona em tabelas grandes, por isso deixei ai. 
+            ele funcionaa apenas de 2 em 2 (ou voce pesquisa mas nome ta ai)*/
+            thead >tr >th {
+                position: sticky;
+                top: -1px;
+                background-color: rgb(44, 43, 43);
+            }
+            /* outro codigo que só funciona em tabelas grandes. */
+    </style>
+</head>
+<body>
+    <h1>Uso de tabela</h1>
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>São Paulo</td>
+            <td class="num">46 024 937</td>
+
+        </tr>   
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">17 264 943  </td>
+            </tr>         
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total de Habitantes</th>
+                <td class="num">63.289.880</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
